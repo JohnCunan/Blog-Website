@@ -103,6 +103,7 @@ h2 {
 .blog-groups-container img {
     max-width: 400px;
     max-height: 400px;
+    cursor: pointer;
 }
 
 .blog-groups-container h3,
@@ -235,13 +236,11 @@ a {
 }
 
 /* POP UP */
-/* Popup container */
 .dark-mode-button {
     position: relative;
     display: inline-block;
 }
 
-/* The actual popup (appears on top) */
 .dark-mode-button .popuptext {
     visibility: hidden;
     width: 160px;
@@ -257,7 +256,6 @@ a {
     margin-left: -80px;
 }
 
-/* Popup arrow */
 .dark-mode-button .popuptext::after {
     content: "";
     position: absolute;
@@ -269,7 +267,6 @@ a {
     border-color: #555 transparent transparent transparent;
 }
 
-/* Toggle this class when clicking on the popup container (hide and show the popup) */
 .dark-mode-button .show {
     visibility: visible;
     -webkit-animation: fadeIn 0.4s;
@@ -280,7 +277,6 @@ a {
     visibility: hidden;
 }
 
-/* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
     from {
         opacity: 0;
@@ -300,6 +296,8 @@ a {
         opacity: 1;
     }
 }
+
+
 
 /* MEDIA QUERIES */
 
