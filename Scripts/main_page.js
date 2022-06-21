@@ -1,16 +1,16 @@
-mybutton = document.getElementById("backToTopBtn");
+//BACK TO TOP BUTTON
+topButton = document.getElementById("back-To-Top-Btn");
 
 window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
+    if (window.pageYOffset > 300) {
+        topButton.style.display = "block";
     } else {
-        mybutton.style.display = "none";
+        topButton.style.display = "none";
     }
 }
 
 function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    window.scrollTo(0, 0)
 }

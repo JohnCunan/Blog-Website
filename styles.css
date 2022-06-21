@@ -10,6 +10,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat';
+    scroll-behavior: smooth;
 }
 
 .logo {
@@ -163,7 +164,7 @@ a {
 
 /* JS ELEMENTS */
 
-#backToTopBtn {
+#back-To-Top-Btn {
     display: none;
     position: fixed;
     bottom: 90px;
@@ -171,16 +172,20 @@ a {
     z-index: 99;
     border: none;
     outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: red;
-    color: white;
     cursor: pointer;
-    padding: 15px;
+    padding: 5px;
     border-radius: 10px;
-    font-size: 18px;
 }
 
-#backToTopBtn:hover {
+#back-To-Top-Btn:hover {
     background-color: #555;
+}
+
+#back-To-Top-Btn img {
+    width: 40px;
+    height: 40px;
 }
 
 
