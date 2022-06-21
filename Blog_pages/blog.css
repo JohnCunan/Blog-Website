@@ -1,10 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@100&display=swap');
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat';
+}
+
+/* TOGGLE OF DARK MODE BUTTON */
+
+body.dark {
+    background-color: #292C35;
+}
+
+body.dark h1 {
+    color: #FFFF;
+}
+
+body.dark h2 {
+    color: #FFFF;
+}
+
+body.dark h4 {
+    color: #FFFF;
+}
+
+body.dark li {
+    color: #FFFF;
+}
+
+body.dark p {
+    color: #FFFF;
+}
+
+
+.logo {
+    max-width: 40%;
 }
 
 .logo {
@@ -32,7 +64,7 @@ html, body {
 
 .navigation-container .links-container a:hover {
     transition: 0.4s ease-in-out;
-    border: black  3px;
+    border: black 3px;
     border-radius: 20px;
     background-color: rgb(240, 68, 68);
     color: white;
@@ -84,14 +116,18 @@ html, body {
     text-decoration: none;
 }
 
-.blog-content-container .more-blogs .more-blog1, .more-blog2, .more-blog3 {
+.blog-content-container .more-blogs .more-blog1,
+.more-blog2,
+.more-blog3 {
     background-color: rgb(37, 37, 37);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     transition: 0.3s;
     cursor: pointer;
 }
 
-.blog-content-container .more-blogs .more-blog1:hover, .more-blog2:hover, .more-blog3:hover {
+.blog-content-container .more-blogs .more-blog1:hover,
+.more-blog2:hover,
+.more-blog3:hover {
     background-color: rgb(240, 68, 68);
     transform: scale(1.1);
     transition: 0.3s;
@@ -118,6 +154,135 @@ html, body {
     max-width: 40px;
 }
 
+/* BACK TO TOP BUTTON */
+
+#back-To-Top-Btn {
+    display: none;
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: rgb(75, 78, 209);
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#back-To-Top-Btn:hover {
+    background-color: #555;
+}
+
+#back-To-Top-Btn img {
+    width: 40px;
+    height: 40px;
+}
+
+/* DARK MODE BUTTON */
+
+.label {
+    width: 50px;
+    height: 26px;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 3px;
+    border-radius: 50px;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+
+.ball {
+    background-color: #FFFF;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    height: 22px;
+    width: 22px;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.label .ball {
+    transform: translateX(25px);
+}
+
+/* POP UP */
+/* Popup container */
+.dark-mode-button {
+    position: relative;
+    display: inline-block;
+}
+
+/* The actual popup (appears on top) */
+.dark-mode-button .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: -175%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.dark-mode-button .popuptext::after {
+    content: "";
+    position: absolute;
+    top: -75%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.dark-mode-button .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 0.4s;
+    animation: fadeIn 0.4s
+}
+
+.dark-mode-button .hide {
+    visibility: hidden;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
 
 /* MEDIA QUERIES */
 
@@ -136,7 +301,9 @@ html, body {
         display: inline;
     }
 
-    .blog-content-container .more-blogs .more-blog1, .more-blog2, .more-blog3 {
+    .blog-content-container .more-blogs .more-blog1,
+    .more-blog2,
+    .more-blog3 {
         background-color: rgb(37, 37, 37);
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         transition: 0.3s;
@@ -144,11 +311,11 @@ html, body {
         display: flex;
         padding: 10px;
     }
-    
+
 }
 
 @media all and (max-width: 880px) {
-    
+
     .navigation-container .links-container a {
         margin: 10px;
     }
@@ -156,7 +323,7 @@ html, body {
 }
 
 @media all and (max-width: 830px) {
-    
+
     .navigation-container .links-container a {
         margin: 5px;
     }
@@ -174,7 +341,7 @@ html, body {
 
 
 @media all and (max-width: 790px) {
-    
+
     .navigation-container .links-container a {
         padding: 0px 0px 0px 0px;
     }
@@ -187,7 +354,7 @@ html, body {
 }
 
 @media all and (max-width: 770px) {
-    
+
     .navigation-container {
         flex-direction: column;
     }

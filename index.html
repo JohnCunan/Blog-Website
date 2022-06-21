@@ -19,7 +19,15 @@
         <a href="#">Home</a>
         <a href="#blogs">Blogs</a>
         <a href="#about-us">About Us</a>
-        
+      </div>
+      <div class="dark-mode-button" onmouseenter="showPopUp()" onmouseleave="hidePopUp()">
+        <span class="popuptext" id="darkPopUp">Toggle For Dark/Light Mode</span>
+        <input type="checkbox" class="checkbox" id="darkModeBtn" onclick="changeTheme()">
+        <label for="darkModeBtn" class="label">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+          <div class="ball"></div>
+        </label>
       </div>
     </div>
     <!-- BLOG POSTS -->
@@ -29,7 +37,7 @@
         <img src="img/banner1.png" class="banner" />
         <h3>Best Gaming Pheriperals of 2021</h3>
         <p>January 16, 2022</p> 
-        <div class="description">
+        <div class="description" >
           <p>
             Making a switch to PC to handle your fun is a big step, and it's not
             complete without some of the best accessories for PC gaming. Whether

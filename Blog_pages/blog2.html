@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="blog.css" />
     <link rel="icon" href="tab-icon.png" />
+    <script src="../Scripts/main_page.js" defer></script>
     <title>
       Call of Duty: Black Ops Cold War Is One of the Best Selling Games in US
       History
@@ -21,6 +22,15 @@
         <a href="../index.html">Home</a>
         <a href="#">Blogs</a>
         <a href="../index.html">About Us</a>
+        <div class="dark-mode-button" onmouseenter="showPopUp()" onmouseleave="hidePopUp()">
+          <span class="popuptext" id="darkPopUp">Toggle For Dark/Light Mode</span>
+          <input type="checkbox" class="checkbox" id="darkModeBtn" onclick="changeTheme()">
+          <label for="darkModeBtn" class="label">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <div class="ball"></div>
+          </label>
+        </div>
       </div>
     </div>
     <!-- BLOG POST -->
@@ -108,5 +118,6 @@
         /></a>
       </div>
     </div>
+    <button onclick="topFunction()" id="back-To-Top-Btn"><img src="../img/up-icon.png"></button>
   </body>
 </html>

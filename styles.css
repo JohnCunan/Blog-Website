@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Roboto:wght@100&display=swap');
 
-* {
+/* * {
     outline: orange 5px solid;
-}
+} */
 
 html,
 body {
@@ -11,6 +11,17 @@ body {
     box-sizing: border-box;
     font-family: 'Montserrat';
     scroll-behavior: smooth;
+    transition: background 0.1s linear;
+}
+
+/* TOGGLE OF DARK MODE BUTTON */
+
+body.dark {
+    background-color: #292C35;
+}
+
+body.dark h2 {
+    color: #FFFF;
 }
 
 .logo {
@@ -162,7 +173,7 @@ a {
     max-width: 40px;
 }
 
-/* JS ELEMENTS */
+/* BACK TO TOP BUTTON */
 
 #back-To-Top-Btn {
     display: none;
@@ -173,7 +184,7 @@ a {
     border: none;
     outline: none;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: red;
+    background-color: rgb(75, 78, 209);
     cursor: pointer;
     padding: 5px;
     border-radius: 10px;
@@ -188,6 +199,107 @@ a {
     height: 40px;
 }
 
+/* DARK MODE BUTTON */
+
+.label {
+    width: 50px;
+    height: 26px;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 3px;
+    border-radius: 50px;
+}
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+
+.ball {
+    background-color: #FFFF;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    height: 22px;
+    width: 22px;
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked+.label .ball {
+    transform: translateX(25px);
+}
+
+/* POP UP */
+/* Popup container */
+.dark-mode-button {
+    position: relative;
+    display: inline-block;
+}
+
+/* The actual popup (appears on top) */
+.dark-mode-button .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: -175%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+/* Popup arrow */
+.dark-mode-button .popuptext::after {
+    content: "";
+    position: absolute;
+    top: -75%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.dark-mode-button .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 0.4s;
+    animation: fadeIn 0.4s
+}
+
+.dark-mode-button .hide {
+    visibility: hidden;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
 
 /* MEDIA QUERIES */
 

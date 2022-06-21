@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="blog.css" />
     <link rel="icon" href="tab-icon.png" />
     <title>How to Use Incantations in Elden Ring</title>
+    <script src="../Scripts/main_page.js" defer></script>
   </head>
   <body>
     <!-- NAVIGATION -->
@@ -18,6 +19,15 @@
         <a href="../index.html">Home</a>
         <a href="#">Blogs</a>
         <a href="../index.html">About Us</a>
+        <div class="dark-mode-button" onmouseenter="showPopUp()" onmouseleave="hidePopUp()">
+          <span class="popuptext" id="darkPopUp">Toggle For Dark/Light Mode</span>
+          <input type="checkbox" class="checkbox" id="darkModeBtn" onclick="changeTheme()">
+          <label for="darkModeBtn" class="label">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <div class="ball"></div>
+          </label>
+        </div>
       </div>
     </div>
     <!-- BLOG POST -->
@@ -126,5 +136,6 @@
         /></a>
       </div>
     </div>
+    <button onclick="topFunction()" id="back-To-Top-Btn"><img src="../img/up-icon.png"></button>
   </body>
 </html>
