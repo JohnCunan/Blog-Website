@@ -80,3 +80,8 @@ function openImgModal() {
 function closeImgModal() {
     modal.style.display = "none";
 }
+
+//PRESS 'D' TO TOGGLE DARK MODE
+function darkKey() {
+
+}

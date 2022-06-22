@@ -51,3 +51,20 @@ function goToRandomBlog() {
 
 }
 
+//GO TO BLOG BY CLICKING THE IMAGE BANNER
+function goToBlog1() {
+    window.location.href = "../Blog_pages/blog1.html";
+}
+
+function goToBlog2() {
+    window.location.href = "../Blog_pages/blog2.html";
+}
+
+function goToBlog3() {
+    window.location.href = "../Blog_pages/blog3.html";
+}
+
+function goToBlog4() {
+    window.location.href = "../Blog_pages/blog4.html";
+}
+

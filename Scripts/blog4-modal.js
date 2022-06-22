@@ -4,7 +4,7 @@ var modalImg = document.getElementById("banner4");
 
 function openImgModal() {
     modal.style.display = "block";
-    modalImg.src = "../img/banner4.png";
+    modalImg.src = "../img/Banner4.png";
 }
 
 function closeImgModal() {
