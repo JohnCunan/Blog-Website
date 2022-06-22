@@ -68,3 +68,18 @@ function goToBlog4() {
     window.location.href = "../Blog_pages/blog4.html";
 }
 
+//PRESS 'D' TO TOGGLE DARK MODE
+var dark = false;
+
+function darkKey() {
+    document.body.classList.toggle("dark")
+
+    if (dark === false) {
+        document.getElementById("darkModeBtn").checked = true;
+        dark = true;
+    } else {
+        document.getElementById("darkModeBtn").checked = false;
+        dark = false;
+    }
+
+}

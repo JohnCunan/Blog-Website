@@ -82,6 +82,17 @@ function closeImgModal() {
 }
 
 //PRESS 'D' TO TOGGLE DARK MODE
+var dark = false;
+
 function darkKey() {
+    document.body.classList.toggle("dark")
+
+    if (dark === false) {
+        document.getElementById("darkModeBtn").checked = true;
+        dark = true;
+    } else {
+        document.getElementById("darkModeBtn").checked = false;
+        dark = false;
+    }
 
 }
