@@ -67,3 +67,16 @@ function goToBlog3() {
 function goToBlog4() {
     window.location.href = "Blog_pages/blog4.html";
 }
+
+//MODAL IMAGE
+var modal = document.getElementById("banner-modal");
+var modalImg = document.getElementById("aboutBanner");
+
+function openImgModal() {
+    modal.style.display = "block";
+    modalImg.src = "img/about-us-banner-1.jpg";
+}
+
+function closeImgModal() {
+    modal.style.display = "none";
+}
