@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="img/tab-icon.png" />
     <script src="Scripts/main_page.js" defer></script>
+    <script src="Scripts/modal-script.js" defer></script>
   </head>
   <!-- NAVIGATION -->
-  <body onkeypress="darkKey()">
+  <body onkeypress="darkKey()" onload="showModal()">
     <nav class="navigation-container">
       <div class="logo-container">
         <a href="#"><img src="img/Logo.PNG" class="logo" /></a>
@@ -130,5 +131,24 @@
       <span class="close" onclick="closeImgModal()">&times;</span>
       <img class="modal-content" id="aboutBanner">
     </div>
+
+    <div class="initial-modal-container"  id="initPop" onclick="closeModal()">
+      <div class="init-modal">
+        <h1>Welcome to the second part of the Task Performance</h1>
+        <h3>Here we added JavaScript Events: </h3>
+        <p><span>[onclick]</span> - Dark Mode Toggle</p>
+        <p><span>[onmouseenter]</span> - Dark Mode Pop Up</p>
+        <p><span>[onmouseleave]</span> - Dark Mode Pop Out</p>
+        <p><span>[onkeypress]</span> - Press any Key To Toggle Dark Mode</p>
+        <p><span>[onclick]</span> - Images Modal (Clicking Images in About Us and Blog Posts Will Preview The Image)</p>
+        <p><span>[onclick]</span> - Clickable Images (Clicking The Images at The Latest Blog Posts will Direct You To The Blog Post Webpage)</p>
+        <p><span>[onclick]</span> - Random Blog Button</p>
+        <p><span>[onclick]</span> - Back To Top Button</p>
+        <p><span>[onclick]</span> - Close Button When an Image is Previewed</p>
+        <p><span>[onload]</span> - And this Pop Up Modal</p>
+        <p class="helper">Click anywhere to close this pop up</p>
+      </div>
+    </div>
+
   </body>
 </html>

@@ -55,8 +55,6 @@ body.dark h2 {
     color: white;
 }
 
-
-
 /* LATEST BLOG POSTS */
 
 h2 {
@@ -360,6 +358,52 @@ a {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* INITIAL POP UP MODAL */
+.initial-modal-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.initial-modal-container .helper,
+span {
+    font-weight: bold;
+}
+
+.init-modal {
+    background-color: #FFFF;
+    padding: 30px 50px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* text-align: center; */
+    transition: 0.2s ease-in-out;
+}
+
+.init-modal .helper {
+    text-align: center;
+    font-size: 18px;
+    color: rgb(240, 68, 68);
+}
+
+.init-modal h1 {
+    margin: 0;
+}
+
+.init-modal p {
+    font-size: 14px;
+}
+
+button:hover {
+    transform: scale(1.11);
 }
 
 
