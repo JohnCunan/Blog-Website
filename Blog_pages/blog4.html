@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="blog.css" />
     <link rel="icon" href="tab-icon.png" />
     <script src="../Scripts/blog_pages.js" defer></script>
+    <script src="../Scripts/blog4-modal.js" defer></script>
     <title>E3 2022 will be online-only, just like last years event</title>
   </head>
   <body>
@@ -33,7 +34,11 @@
     <!-- BLOG POST -->
     <div class="blog-post-container">
       <div class="post-banner-container">
-        <img src="../img/Banner4.png" alt="" />
+        <img src="../img/Banner4.png" id="postImg" onclick="openImgModal()" />
+      </div>
+      <div id="banner-modal" class="modal">
+        <span class="close" onclick="closeImgModal()">&times;</span>
+        <img class="modal-content" id="banner4">
       </div>
       <div class="blog-content-container">
         <div class="blog-post">

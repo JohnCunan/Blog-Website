@@ -32,7 +32,7 @@ function hidePopUp() {
     pophide.classList.toggle("hide");
 }
 
-//RANDOM BLOG
+//GO TO RANDOM BLOG
 function goToRandomBlog() {
     var rndInt = Math.floor(Math.random() * 4) + 1
 
@@ -51,7 +51,7 @@ function goToRandomBlog() {
 
 }
 
-//GO TO BLOG BY CLICKING THE BANNER
+//GO TO BLOG BY CLICKING THE IMAGE BANNER
 function goToBlog1() {
     window.location.href = "Blog_pages/blog1.html";
 }

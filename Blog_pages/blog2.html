@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="blog.css" />
     <link rel="icon" href="tab-icon.png" />
     <script src="../Scripts/blog_pages.js" defer></script>
+    <script src="../Scripts/blog2-modal.js" defer></script>
     <title>
       Call of Duty: Black Ops Cold War Is One of the Best Selling Games in US
       History
@@ -36,7 +37,11 @@
     <!-- BLOG POST -->
     <div class="blog-post-container">
       <div class="post-banner-container">
-        <img src="../img/banner2.png" alt="" />
+        <img src="../img/banner2.png" id="postImg" onclick="openImgModal()" />
+      </div>
+      <div id="banner-modal" class="modal">
+        <span class="close" onclick="closeImgModal()">&times;</span>
+        <img class="modal-content" id="banner2">
       </div>
       <div class="blog-content-container">
         <div class="blog-post">

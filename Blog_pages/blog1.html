@@ -8,6 +8,7 @@
     <link rel="icon" href="tab-icon.png" />
     <title>Best Gaming Pheriperals of 2021</title>
     <script src="../Scripts/blog_pages.js" defer></script>
+    <script src="../Scripts/blog1-modal.js" defer></script>
   </head>
   <body>
     <!-- NAVIGATION -->
@@ -33,7 +34,11 @@
     <!-- BLOG POST -->
     <div class="blog-post-container">
       <div class="post-banner-container">
-        <img src="../img/banner1.png" alt="" />
+        <img src="../img/banner1.png" id="postImg" class="post-image" onclick="openImgModal()"/>
+      </div>
+      <div id="banner-modal" class="modal">
+        <span class="close" onclick="closeImgModal()">&times;</span>
+        <img class="modal-content" id="banner1">
       </div>
       <div class="blog-content-container">
         <div class="blog-post">
