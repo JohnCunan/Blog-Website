@@ -437,6 +437,12 @@ button:hover {
 
 }
 
+@media all and (max-width: 950px) {
+    .initial-modal-container .init-modal p, h1, h3{
+       font-size: 13px;
+    }
+}
+
 
 @media all and (max-width: 880px) {
 
